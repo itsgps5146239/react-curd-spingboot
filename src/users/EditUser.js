@@ -26,12 +26,12 @@ export default function EditUser() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.put(`${url}/${id}`, user);
+    await axios.put(`${url}/user/${id}`, user);
     navigate("/");
   };
 
   const loadUser = async () => {
-    const result = await axios.get(`${url}/${id}`);
+    const result = await axios.get(`${url}/user/${id}`);
     setUser(result.data);
   };
 
